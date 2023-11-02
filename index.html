@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="theme-toggle">
+        <button onclick="toggleMode()">Toggle Mode</button>
+      </div>
+      <div class="display">
+        <input type="text" id="input" disabled ></input>
+        <span id="output"></span>
+      </div>
+      <div class="keypad">
+        <div class="numbers">
+          <button onclick="appendValue('7')">7</button>
+          <button onclick="appendValue('8')">8</button>
+          <button onclick="appendValue('9')">9</button>
+          <button onclick="appendValue('4')">4</button>
+          <button onclick="appendValue('5')">5</button>
+          <button onclick="appendValue('6')">6</button>
+          <button onclick="appendValue('1')">1</button>
+          <button onclick="appendValue('2')">2</button>
+          <button onclick="appendValue('3')">3</button>
+          <button onclick="appendValue('0')">0</button>
+          <button onclick="appendValue('.')">.</button>
+        </div>
+        <div class="operations">
+          <button class="operator-btn" onclick="clearDisplay()">C</button>
+          <button class="operator-btn" onclick="deleteCharacter()">
+            &#9003;
+          </button>
+          <button class="operator-btn" onclick="appendValue('Math.PI')">
+            π
+          </button>
+          <button class="operator-btn" onclick="appendValue('(')">(</button>
+          <button class="operator-btn" onclick="appendValue(')')">)</button>
+          <button class="operator-btn" onclick="appendValue('Math.sqrt(')">
+            √
+          </button>
+          <button class="operator-btn" onclick="appendValue('Math.sin(')">
+            sin
+          </button>
+          <button class="operator-btn" onclick="appendValue('Math.cos(')">
+            cos
+          </button>
+          <button class="operator-btn" onclick="appendValue('Math.tan(')">
+            tan
+          </button>
+          <button class="operator-btn" onclick="appendValue('/')">/</button>
+          <button class="operator-btn" onclick="appendValue('*')">*</button>
+          <button class="operator-btn" onclick="appendValue('-')">-</button>
+          <button class="operator-btn" onclick="appendValue('+')">+</button>
+          <button class="operator-btn" onclick="calculate()">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
